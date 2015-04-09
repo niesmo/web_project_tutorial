@@ -2,10 +2,38 @@
 <html>
 <head>
     <title>Ruby on Rails Tutorial -- High-D-Mand</title>
+
+    <!-- Linking the styling for highlight.js -->
+    <link href="css/highlight/default.css" rel="stylesheet" />
+    
+    <!-- Linking the styling for this particular page -->
     <link href="css/ruby_on_rails_tutorial.css" rel="stylesheet" />
 </head>
 <body>
     <h3>Ruby on Rails Tutorial</h3>
+
+    <!-- Pre tag will take all spaces into account -->
+    <pre>
+        <code>
+class ApplicationController < ActionController::Base
+    # Prevent CSRF attacks by raising an exception.
+    # For APIs, you may want to use :null_session instead.
+    protect_from_forgery with: :exception
+    def hello
+        render text: "hello, world!"
+    end
+end
+        </code>
+    </pre>
+
+    <!-- Linking the jQuery -->
+    <script src="js/jquery/jquery.js"></script>
+
+    <!-- Linking the highlight.js script file -->
+    <script src="js/highlight/highlight.pack.js"></script>
+
+    <!-- Linking the js for this page -->
     <script src="js/ruby_on_rails_tutorial.js"></script>
+
 </body>
 </html>
