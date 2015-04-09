@@ -5,20 +5,54 @@
 
     <!-- Linking the styling for highlight.js -->
     <link href="css/highlight/default.css" rel="stylesheet" />
-    
+
+    <!-- Linking layout stylings -->
+    <link href="css/layout.css" rel="stylesheet" />
+
     <!-- Linking the styling for this particular page -->
     <link href="css/ruby_tutorial.css" rel="stylesheet" />
 </head>
 <body>
-    <h3>Ruby Tutorial</h3>
+    <header>
+        <h1 class="logo"><a href="/">High-D-Mand</a></h1>
+        <nav>
+            <ul>
+                <li><a href="ruby_tutorial.html">Ruby</a></li>
+                <li><a href="javascript_tutorial.html">JavaScript</a></li>
+                <li><a href="html_css_tutorial.html">HTML &amp; CSS</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="wrapper">
+        <h3>Ruby Tutorial</h3>
 
-    <h4>Table Of Content</h4>
-    <ul>
-        <li>Installing Rails</li>
-    </ul>
-    <!-- Pre tag will take all spaces into account -->
-    <pre>
-        <code>
+        <h4>Table Of Content</h4>
+        <ul>
+            <li>Introduction</li>
+            <li>Ruby Interpreter (irb)</li>
+            <li>Calling Some functions (puts, +, *, ...)</li>
+            <li>Return Types</li>
+            <li>Functions</li>
+            <li>Classes</li>
+            <li>
+                <ul>
+                    <li>initialize function & new function</li>
+                    <li>Instance variables</li>
+                    <li>Class variables</li>
+                    <li>Global Variables</li>
+                    <li>Local Variables</li>
+                    <li>Constants</li>
+                </ul>
+            </li>
+            <li>Modules</li>
+            <li>Iterators</li>
+            <li>Arrays</li>
+            <li>Hashes</li>
+            <li>buit-in functions</li>
+        </ul>
+        <!-- Pre tag will take all spaces into account -->
+        <pre>
+            <code>
 class ApplicationController < ActionController::Base
     # Prevent CSRF attacks by raising an exception.
     # For APIs, you may want to use :null_session instead.
@@ -27,8 +61,10 @@ class ApplicationController < ActionController::Base
         render text: "hello, world!"
     end
 end
-        </code>
-    </pre>
+            </code>
+        </pre>
+    </div>
+    
 
     <!-- Linking the jQuery -->
     <script src="js/jquery/jquery.js"></script>

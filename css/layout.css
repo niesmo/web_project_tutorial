@@ -1,0 +1,59 @@
+body{
+    padding:0;
+    margin:0;
+}
+header{
+    background-color:darkcyan;
+    width:1000px;
+    margin:0 auto;
+    height:50px;
+}
+header .logo{
+      margin: 0;
+      float: left;
+      padding-top: 5px;
+      padding-left: 15px;      
+      font-weight: normal;
+      font-family: verdana;
+}
+
+header .logo a{
+    color: white;
+    text-decoration:none;
+}
+
+header nav{
+    text-align:right;
+    height:100%;
+    font-family:Verdana;
+}
+header ul{
+    display:inline-block;
+    list-style-type:none;
+    margin: 0;
+    padding: 0;
+    height:100%;
+}
+header ul li{
+    display:inline-block;
+    height:100%;
+}
+header ul li a{
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+    height: calc(100% - 15px);
+    padding-top: 15px;
+    letter-spacing: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+header ul li a:hover{
+    background-color:gray;
+}
+
+.wrapper{
+    width:1000px;
+    margin:0 auto;
+    background-color:antiquewhite;
+}
