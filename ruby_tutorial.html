@@ -131,7 +131,7 @@ print_program_name #=> will execute fine
 
             <hr />
 
-            <h3 id="callingfunc">Calling Some Functions</h3>
+            <h3 id="callingfunc">Calling Some Built-in Methods</h3>
             
             <p>We talked about how everything is an object in Ruby. Therefore, in order to work with objects, we must call their public methods and that is how we interact with them. Here are some examples.</p>
 <pre>
@@ -328,14 +328,54 @@ end</code></pre>
             <hr/>
             <h3 id="iterators">Iterators</h3>
 
-            <p>Ruby iterators are an easy way to loop through an entire collection, accessing each individual element.
-            </p>
+            <p>Ruby iterators are an easy way to loop through an entire collection, accessing each individual element.</p>
 <pre><code>arr = [1,2,3,4,5]
 arr.each do |i|
     puts i
     puts i + 3
 end   
 </code></pre>
+
+            <p>There are many ways to to iterate through arrays and objects. Ruby's built in enumerators make it very easy to do so. Here are some of the basic iterators provided by Ruby. Remember that you can create your own Enumerators very easily. <a href="http://ruby-doc.org/core-1.9.3/Enumerator.html">Enumerators</a></p>
+
+            <h4>Times</h4>
+<pre><code>10.times do |i|
+  puts i 
+end
+
+x = 10.times
+
+#puts x.methods #all the methods associated with an Enumerator
+puts "Max" , x.max #max iteration
+puts "Min" , x.min #min iteration    
+</code></pre>
+            <div class="tiy">
+                <a target="_blank" href="http://repl.it/iFi">Try it</a>
+            </div>
+            <h4>While</h4>
+<pre>
+<code>$i = 0
+$num = 5
+while $i < $num  do
+   puts("Inside the loop i = #$i" )
+   $i +=1
+end
+</code>
+</pre>
+            <div class="tiy">
+                <a target="_blank" href="http://repl.it/iFi">Try it</a>
+            </div>
+            <h4>Until</h4>
+<pre><code>$i = 0
+$num = 5
+until $i > $num  do
+   puts("Inside the loop i = #$i" )
+   $i +=1;
+end</code></pre>
+
+            <div class="tiy">
+                <a target="_blank" href="http://repl.it/iFi">Try it</a>
+            </div>
 
             <hr/>
             <h3 id="arrays">Arrays</h3>
@@ -363,6 +403,10 @@ arr4 = arr3 + arr1
     arr[1..3]           #=>[1,2,3]
 </code></pre>
 
+            <div class="tiy">
+                <a target="_blank" href="http://repl.it/iFq">Try it</a>
+            </div>
+            
             <hr/>
             <h3 id="hashes">Hashes</h3>
             <p>A Hash is a collection of key-value pairs like this: "employee" => "salary". It is similar to an Array, except that indexing is done via arbitrary keys of any object type, not an integer index.</p>
