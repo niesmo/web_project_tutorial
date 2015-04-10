@@ -31,9 +31,9 @@
             <ul>
                 <li><a href="#intro">Introduction</a></li>
                 <li><a href="#irb">Ruby Interpreter (irb)</a></li>
+                <li><a href="#variables">Variables</a></li>
                 <li><a href="#callingfunc">Calling some functions (puts, +, *, ...)</a></li>
-                <li><a href="#returntypes">Return Types</a></li>
-                <li><a href="#functions">Functions</a></li>
+                <li><a href="#methods">Methods</a></li>
                 <li><a href="#classes">Classes</a></li>
                 <li>
                     <ul>
@@ -49,7 +49,6 @@
                 <li><a href="#iterators">Iterators</a></li>
                 <li><a href="arrays">Arrays</a></li>
                 <li><a href="hashes">Hashes</a></li>
-                <li>buit-in functions</li>
             </ul>
 
             <h3 id="intro">Introduction</h3>
@@ -63,16 +62,113 @@
             <p>IRB stands for Interactive Ruby which executes Ruby Code interactively.</p>
             <pre><code>irb(main):001:0> 1+2
 => 3</code></pre>
-            <p>For the purposes of this tutorial, we used an online interpreter so that you can follow along and if you want to experience a long the way, you could easily do so. <br /><a target="_blank" href="http://repl.it/">repl.it</a></p>
+            <p>For the purposes of this tutorial, we used an online interpreter so that you can follow along and if you want to try them with us, you could easily do so. <br /><a target="_blank" href="http://repl.it/">repl.it</a></p>
             
             <hr/>
-            <h3 id="callingfunc">Calling Some Functions</h3>
 
-            <hr/>
-            <h3 id="returntypes">Return Types</h3>
+            <h3 id="variables">Variables</h3>
+            <p></p>
 
             <hr />
-            <h3 id="functions">Functions</h3>
+
+            <h3 id="callingfunc">Calling Some Functions</h3>
+            
+            <p>We talked about how everything is an object in Ruby. Therefore, in order to work with objects, we must call their public methods and that is how we interact with them. Here are some examples.</p>
+<pre>
+<code>str = "this is an awesome Tutorial"
+puts str.capitalize
+puts str.length
+puts str.slice 11, 7
+puts str.slice(11,7).capitalize
+puts str[11,7]
+puts str[11..18]
+puts "There are " + str.count('i').to_s  + ' i\'s in this sentence' 
+puts str.insert(18, "-X")
+puts str.reverse
+
+my_num = 12345
+puts my_num
+puts "is even ? " + my_num.even?.to_s
+puts "is odd ? " + my_num.odd?.to_s
+puts "Next : " + my_num.next.to_s
+puts "In binary ? easy " + my_num.to_s(2)
+puts "In hex " + my_num.to_s(16)
+</code>
+</pre>
+            <div class="tiy">
+                <a target="_blank" href="http://repl.it/iCb/2">Try it</a>
+            </div>
+            <p>But again, everything is an object, there is not really a primitive type in Ruby! It is all objects and classes. That means that even numeric values are object. If that is the case, then the operations that we do on numberic values are functions. Take a look at these examples</p>
+            <pre><code>my_num = 5
+puts my_num.*(3) # my_num*3
+puts my_num.+(5) # my_num+5
+puts my_num.-(4) # my_num-4
+puts my_num./(2.5) # my_num/2.5</code></pre>
+            <p>These are called <b>syntactic sugar</b> that Ruby has added for the ease of use.</p>
+            <div class="tiy">
+                <a target="_blank" href="http://repl.it/iCm">Try it</a>
+            </div>
+
+            <hr />
+            <h3 id="methods">Methods</h3>
+            <p>Methods are probably the most used feature of any programming language ever existed. You can create methods using the following syntax</p>
+<pre><code>def method_name [( [arg [= default]]...[, * arg [, &expr ]])]
+    expr..
+end</code></pre>
+            <p>Your methods name must start with a lowercase letter. It is best practice that your method names are all in lowercase and separated with underscore if multiple words are used.</p>
+            <p>Note that the last expression in a method is returned unless an explicit return is specified</p>
+
+<pre><code>def hi
+    "Hi"
+end
+    
+puts hi</code></pre>
+            <div class="tiy">
+                <a target="_blank" href="http://repl.it/iDF/2">Try it</a>
+            </div>
+            <p>We can have methods that take in arguments as well</p>
+
+<pre><code>#method with 1 argument
+def hi name
+    "Hi " + name
+end
+
+puts hi "Mary"
+
+
+#method with 2 arguments
+def hi name,msg
+    "Hi " + name + "\n" + msg
+end
+
+puts hi "David", "Welcome to the best tutorial site ever made"    
+</code></pre>
+            <div class="tiy">
+                <a target="_blank" href="http://repl.it/iDF/2">Try it</a>
+            </div>
+            <p>This may be a strange concept, but we can have methods that take in as many arguments as we pass it to. These types of methods do exist in other programming languages such as C/C++. printf and scanf are two of the most popular examples of such functions. In Ruby we use an operator called the Splat Operator to indicate such thing. Here is an example</p>
+
+<pre><code>def avg(*num)
+   sum = 0
+   count = 0
+   if num.respond_to?("each")
+        num.each do |i|
+           sum += i 
+           count += 1
+        end
+    else
+        count = 1
+        sum = num
+   end
+   sum/count
+end
+puts avg 1,2,3
+puts avg 2,3,4,5,6
+puts avg 1
+</code></pre>
+            <div class="tiy">
+                <a target="_blank" href="http://repl.it/iDF/2">Try it</a>
+            </div>
 
 
 
@@ -193,8 +289,6 @@ arr4 = arr3 + arr1
             <hr/>
             <h3 id="hashes">Hashes</h3>
 
-            <hr/>
-            <h3 id="builtIn">builtIn</h3>
 
         </div>
     </div>
