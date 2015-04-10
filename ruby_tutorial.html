@@ -169,6 +169,16 @@ puts my_num./(2.5) # my_num/2.5</code></pre>
                 <a target="_blank" href="http://repl.it/iCm">Try it</a>
             </div>
 
+            <hr/>
+            <h3 id="conditionals">Conditionals</h3>
+            <p>BLAHHHHHHHHHHHHHHH</p>
+<pre><code>
+    1
+2
+3
+4
+</code></pre>
+
             <hr />
             <h3 id="methods">Methods</h3>
             <p>Methods are probably the most used feature of any programming language ever existed. You can create methods using the following syntax</p>
@@ -318,6 +328,15 @@ end</code></pre>
             <hr/>
             <h3 id="iterators">Iterators</h3>
 
+            <p>Ruby iterators are an easy way to loop through an entire collection, accessing each individual element.
+            </p>
+<pre><code>arr = [1,2,3,4,5]
+arr.each do |i|
+    puts i
+    puts i + 3
+end   
+</code></pre>
+
             <hr/>
             <h3 id="arrays">Arrays</h3>
             <p>In Ruby arrays can be created in a number of ways. Including many you are familiar with. 
@@ -330,19 +349,18 @@ arr4 = arr3 + arr1
             
             <p>Here are some useful methods when dealing with arrays. Assume that arr is in it's original condition for each method call.
             </p>
-<pre><code>
-arr = [0,1,2,3,4,5]
-arr.first           #=> 0
-arr.last            #=> 9
-arr.take(4)         #=> [0,1,2,3]
-arr.length          #=> 6
-arr.include?(13)    #=> false
-arr.push(6)         #=> [0,1,2,3,4,5,6]
-arr.pop             #=> [0,1,2,3,4]
-arr.shift           #=> [1,2,3,4,5]
-arr.unshift(17,18)  #=> [17,18,0,1,2,3,4,5]
-arr[3]              #=> 3
-arr
+<pre><code>arr = [0,1,2,3,4,5]
+    arr.first           #=> 0
+    arr.last            #=> 9
+    arr.take(4)         #=> [0,1,2,3]
+    arr.length          #=> 6
+    arr.include?(13)    #=> false
+    arr.push(6)         #=> [0,1,2,3,4,5,6]
+    arr.pop             #=> [0,1,2,3,4]
+    arr.shift           #=> [1,2,3,4,5]
+    arr.unshift(17,18)  #=> [17,18,0,1,2,3,4,5]
+    arr[3]              #=> 3
+    arr[1..3]           #=>[1,2,3]
 </code></pre>
 
             <hr/>
