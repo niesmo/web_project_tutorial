@@ -1,0 +1,7 @@
+.wrapper li{
+    margin:5px 0 5px;
+}
+
+.no-style{
+    list-style-type:none;
+}
