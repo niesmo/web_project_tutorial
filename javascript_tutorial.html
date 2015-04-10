@@ -491,7 +491,7 @@ You can place the < script > tag containing your JavaScript anywhere within you 
 <h3>Objects</h3>
 <hr/>
     <ol>
-        <li><strong>Objects:</strong>
+        <li><strong>Objects(Associative arrays):</strong>
             <br/>
         <ul>
             <li><strong>Introduction:</strong>
@@ -513,18 +513,209 @@ You can place the < script > tag containing your JavaScript anywhere within you 
                     </li>
                 </ul>
                 </li>
+            <br/>
                 <li><strong>Objects Properties:</strong>
                 
                 <br/>
+                    
                 Object properties can be any of the three primitive data types, or any of the abstract data types, such as another object. Object properties are usually variables that are used internally in the object's methods, but can also be globally visible variables that are used throughout the page
                 
                     <br/>
                     For example: objectName.objectProperty = propertyValue;
                     
                 </li>
+            <br/>
+                <li><strong>Objects Expression:</strong>
+                
+                <br/>
+                    <pre>
+        var myCar = 
+        {	make: "Acura",
+            year: 1996,	
+            plate: "NKR462“
+        };
+                        
+        myCar.make = "Ford"
+        myCar["year"] = 2006;
+
+        var str = "ate";
+        myCar["pl"+str] = "NKR463";
+                    </pre>
+                    
+                </li>
+            <br/>
+                <li><strong>Objects Methods(Verbs):</strong>
+                
+                <br/>
+                    Methods are actions that can be performed on objects and Methods are stored in properties as function definitions
+                    <br/>
+                    <br/>
+                    <em>You create an object method with the following syntax:</em> methodName : function() { code lines }
+                    <br/>
+                    <em>You access an object method with the following syntax::</em> objectName.methodName()
+                    
+                </li>
+                <br/>
+                <li><strong>Objects Properties(Nouns):</strong>
+                Properties are the values associated with a JavaScript object and A JavaScript object is a collection of unordered properties
+                <br/>
+                    
+                    
+                </li>
+                <br/>
+                <li>
+                    <strong>Method = property whose value is a function</strong>
+                </li>
+                <br/>
+                <li>
+                    <strong>Prototype:</strong>
+                    <ul>
+                        <li>Description:
+                            <br/>
+                        Every JavaScript object has a prototype. The prototype is also an object.
+
+All JavaScript objects inherit their properties and methods from their prototype.
+                        </li>
+                        <li>Characters:
+                            <br/>
+                            <ul>
+                                <li>
+                                    All JavaScript objects inherit the properties and methods from their prototype
+                                </li>
+                                <li>
+                                    Objects created using an object literal, or with new Object(), inherit from a prototype called Object.prototype.
+                                </li>
+                                <li>
+                                    Objects created with new Date() inherit the Date.prototype.
+                                </li>
+                                <li>
+                                    The Object.prototype is on the top of the prototype chain.
+                                </li>
+                                <li>
+                                    All JavaScript objects (Date, Array, RegExp, Function, ....) inherit from the Object.prototype.
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            Example(add prototype):
+                            <pre>
+            function Dog(n, a) { 
+            this.name = n; 
+            this.age = a; 
+        } 
+   
+        var Marmaduke = { 
+            bark: function (sound) { 
+              return this.name + "says" + sound; 
+            } 
+        } 
+ 
+        Dog.prototype = Marmaduke;
+                            </pre>
+                            
+                        </li>
+                        
+                        
+                    </ul>
+                    
+                </li>
+                
+            </ul>
+            
+        </li>
+        <li>
+            <strong>Arrays:</strong>
+            <ul>
+                <li>
+                    <strong>What is Array?</strong>
+                    <br/>
+                    An array is a special variable, which can hold more than one value at a time
+                </li>
+                <li>
+                    <strong>Creating an Array</strong>
+                    <br/>
+                    var array-name = [item1, item2, ...];      
+                </li>
+                <li>
+                    <strong>Access the Elements of an Array</strong>
+                    <br/>
+                    var name = cars[0];
+                    car[0]="Ope1";
+                </li>
+                <li>
+                    <strong>Methods</strong>
+                    <ul>
+                        <li>
+                            Accessors: Don't change the array
+                            <ol>
+                                <li>
+                                    <pre>
+            Searching:
+            Using indexOf and lastIndexOf
+                                        
+            indexOf(element[, startIndex])
+                                        
+        	var i = n.indexOf(elt);
+            while (i != -1) {
+                report(i);
+                i = n.indexOf(elt, i + 1);
+            }
+
+                                    </pre>
+                                </li>
+                                <li>
+                                    <pre>
+            Concatenate: concat
+            Using indexOf and lastIndexOf
+                                        
+            concat(a1, a2, …, aN)
+	        var d = n.concat(n);
+                                    </pre>
+                                </li>
+                                <li>
+                                    <pre>
+            Extract a sub-section: slice
+	        slice(startIndex, endIndex)
+	        k = n.slice(1,3) //k is n[1], n[2]
+
+                                    </pre>
+                                </li>
+                                <li>
+                                    <pre>
+            Combine into string: join
+	        join(separator)
+	        s = n.join(" "); //default is ","
+                                    </pre>
+                                </li>
+                                
+                            </ol>
+                                    
+                        </li>
+                        <li>
+                            Mutators: change the array
+                            <pre>
+  1.        Add/remove to/from end: push/pop
+            var n = [10, 20];
+            newLength = n.push(30,40); //=>4
+            lastValue = n.pop(); //=>40
+
+  2.        Add/remove from beginning: unshift/shift
+            var n = [10, 20];
+            newLength = n.unshift(30,40); //=>4
+            firstValue = n.shift(); //=>30
+
+                            </pre>
+                            
+                        </li>
+                    </ul>
+                </li>
             </ul>
         </li>
+        
+        
     </ol>
+            
+            
             
             
             
