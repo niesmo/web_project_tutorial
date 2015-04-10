@@ -14,7 +14,7 @@
 </head>
 <body>
     <header>
-        <h1 class="logo"><a href="/">High-D-Mand</a></h1>
+        <h1 class="logo"><a href="#">High-D-Mand</a></h1>
         <nav>
             <ul>
                 <li><a href="ruby_tutorial.html">Ruby</a></li>
@@ -24,45 +24,99 @@
         </nav>
     </header>
     <div class="wrapper">
-        <h3>Ruby Tutorial</h3>
+        <div class="content">
+            <h1 class="text-center heading">Ruby Tutorial</h1>
 
-        <h4>Table Of Content</h4>
-        <ul>
-            <li>Introduction</li>
-            <li>Ruby Interpreter (irb)</li>
-            <li>Calling Some functions (puts, +, *, ...)</li>
-            <li>Return Types</li>
-            <li>Functions</li>
-            <li>Classes</li>
-            <li>
-                <ul>
-                    <li>initialize function & new function</li>
-                    <li>Instance variables</li>
-                    <li>Class variables</li>
-                    <li>Global Variables</li>
-                    <li>Local Variables</li>
-                    <li>Constants</li>
-                </ul>
-            </li>
-            <li>Modules</li>
-            <li>Iterators</li>
-            <li>Arrays</li>
-            <li>Hashes</li>
-            <li>buit-in functions</li>
-        </ul>
-        <!-- Pre tag will take all spaces into account -->
-        <pre>
-            <code>
-class ApplicationController < ActionController::Base
-    # Prevent CSRF attacks by raising an exception.
-    # For APIs, you may want to use :null_session instead.
-    protect_from_forgery with: :exception
-    def hello
-        render text: "hello, world!"
-    end
+            <h3>Table Of Content</h3>
+            <ul>
+                <li><a href="#intro">Introduction</a></li>
+                <li><a href="#irb">Ruby Interpreter (irb)</a></li>
+                <li>Calling Some functions (puts, +, *, ...)</li>
+                <li>Return Types</li>
+                <li>Functions</li>
+                <li>Classes</li>
+                <li>
+                    <ul>
+                        <li>initialize function & new function</li>
+                        <li>Instance variables</li>
+                        <li>Class variables</li>
+                        <li>Global Variables</li>
+                        <li>Local Variables</li>
+                        <li>Constants</li>
+                    </ul>
+                </li>
+                <li>Modules</li>
+                <li>Iterators</li>
+                <li>Arrays</li>
+                <li>Hashes</li>
+                <li>buit-in functions</li>
+            </ul>
+
+            <h3 id="intro">Introduction</h3>
+            <p>This is a tutorial intended for developers who have a basic knowledge of programing including loops, variables, classes, and datatypes. Prior knowledge of Ruby programming is not necessary for these tutorials.</p>
+            <p>This set of tutorials assume that you already have Ruby installed on your machine and is ready to use. If you do not have ruby installed on your computer, please follow this <a href="https://www.ruby-lang.org/en/documentation/installation/">install</a> link before getting started with these tutorial</p>
+            <p>Ruby is an Object Oriented Programming Language. In Ruby everything is an object. Characters, numbers, arrays, and everything else is just an object in Ruby.</p>
+            
+            <hr />
+            
+            <h3 id="irb">Ruby Interpreter (IRB)</h3>
+            <p>IRB stands for Interactive Ruby which executes Ruby Code interactively.</p>
+            <pre><code>irb(main):001:0> 1+2
+=> 3</code></pre>
+            <p>For the purposes of this tutorial, we used an online interpreter so that you can follow along and if you want to experience a long the way, you could easily do so. <br /><a target="_blank" href="http://repl.it/">repl.it</a></p>
+
+            <hr />
+
+            <h3 id="modules">Modules</h3>
+            <p>Modules are a way of grouping different things all together. You can group classes, methods, and constants. One of the biggest advanteges is that they prevent from name clashing. You can have a class with the same name in two different modules without any problems</p>
+            <pre><code>module Identifier
+    statement1
+    statement2
+    ..................
 end
-            </code>
-        </pre>
+</code>
+</pre>
+            <p>For example, you can have a module that is a wrapper for all your simple mathematic functions</p>
+<pre><code>module MyMathModule
+    PI = 3.1415
+    def MyMathModule.square a
+       a*a
+    end
+    def MyMathModule.pythag(a,b)
+        ((a*a)+(b*b))**0.5
+    end
+end</code></pre>
+            <div class="tiy">
+                <a href="http://repl.it/hzg/1">Try it</a>
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                <!-- Pre tag will take all spaces into account -->
+                <!--<pre>
+                        <code>
+        class ApplicationController < ActionController::Base
+            # Prevent CSRF attacks by raising an exception.
+            # For APIs, you may want to use :null_session instead.
+            protect_from_forgery with: :exception
+            def hello
+                render text: "hello, world!"
+            end
+        end
+                        </code>
+                    </pre>-->
+</div>
     </div>
     
 
