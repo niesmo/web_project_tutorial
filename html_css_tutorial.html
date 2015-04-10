@@ -25,12 +25,146 @@
     </header>
     <div class="wrapper">
         <h3>HTML and CSS Tutorial</h3>
+	<p><strong>Introduction:</strong> HTML is interpreted by browsers to create webpages.  HTML is a very forgiving langauge, however authors should be strict when using it.  CSS is a declarative language used to style HTML elements to look pretty!!</p>
+		<ol>
+			<li><strong>HTML</strong></li>
+				<ul>
+					<li>Introduction: HTML is a universally used language for creating web components that are interpreted by many different broswers.</li>
+					<li><strong>Basic elements used to start using HTML</strong></li>
+						<ul>
+							<li>html - outer tag; implies HTML document</li>
+							<li>head - inside < head > tag; header information goes here</li>
+							<li>body - inside < head > tag, below < head > tag, content goes here</li>
+							<li>p - inside < body > tag; basic content paragraph goes here</li>
+						</ul>
+						<pre>
+							<code>
+Basic Elements of an HTML Page: Renders a page with just "This is my paragraph."
 
-        <!-- The rest of the tutorial goes here -->
+< html >
+	< head >
+		< title >HTML Basic Example</title>
+		< meta charset="utf-8"/ >
+	< /head >
+	< body >
+		< p >This is my paragraph.< /p >
+	< /body >
+< /html >
+							</code>
+						</pre>
+					<li><strong>Some other common elements: in < body > tag</strong></li>
+						<ul>
+							<li>br - provides a break between lines</li>
+							<li>a - anchor tag to a hyperlink</li>
+							<li>hr - puts a break with horizontal line</li>
+							<li>img - allows to link to an image tag</li>
+							<li>div - defines a section in an HTML page</li>
+							<li>ul/li - unordered list with elements defined by li</li>
+							<li>table/tr/td - table with rows by tr and data by td</li>
+							<li>form - creates a place for user input (textboxes, checkboxes, etc)</li>
+						</ul>
+					<li><strong>Some other common elements: in < head > tag</strong></li>
+						<ul>
+							<li>title - tag to declare website name</li>
+							<li>meta charset="utf--8" - allows you to insert unicode</li>
+						</ul>
+					<li><strong>unicode</strong> - allows certain elements to be expressed using numbers</li>
+					<li><strong>comments</strong> - a comment in HTML looks like :</li>
+				</ul>
+				<pre>
+					<code>
+Comments in HTML:
 
+< html >
+	< head >
+		< !-- This is a comment!!! -- >
+		< title > We are so cool < /title >
+	< /head >
+	< body >
+	< !-- This is a comment too!!! -- >
+		< p >Do you like HTML yet?< /p >
+		< ul > < !-- This is a table -->
+			< li > Element 1 < /li >
+			< li > Element 2 < /li >
+			< li > Element 3 < /li >
+		< /ul >
+	< /body >
+< /html >
+					</code>
+				</pre>
 
+			<li><strong>CSS</strong></li>
+				<ul>
+					<li><strong>Introduction</strong></li>
+					<li><strong>Style Tag</strong></li>
+					<li><strong>Link to CSS Sheet</strong></li>
+					<li><strong>Example</strong></li>
+					<pre>
+						<code>
+em {
+	color:red;
+	background: gray;
+}
+						</code>
+					</pre>
+					<li><strong>Box Model</strong></li>
+					<ul>
+						<li>Margin</li>
+						<li>Padding</li>
+						<li>Vertical Collapsing</li>
+					</ul>
+					<li><strong>Inheritance</strong></li>
+					<li><strong>Importance</strong></li>
+						<ul>
+							<li>Location</li>
+							<li>Marked As Importance</li>
+							<li>Specificity</li>
+							<li>Declaration Order</li>
+						</ul>
+					<li><strong>Source</strong></li>
+						<ul>
+							<li>Author</li>
+							<li>User</li>
+							<li>Browser</li>
+						</ul>
+					<li><strong>Priority Order</strong></li>
+						<ol>
+							<li>User Important</li>
+							<li>Author Important</li>
+							<li>Author (normal)</li>
+							<li>User (normal)</li>
+							<li>Browser (normal)</li>
+						</ol>
+					<li><strong> Certain Elements: ID's</strong></li>
+					<li><strong>Block Elements</strong></li>
+					<li><strong>Special Tags</strong></li>
+					<li><strong>Selecting Ancestors/Siblings</strong></li>
+						<ul>
+							<li>Space between elements vs. comma</li>
+							<li> > </li>
+							<li> + </li>
+							<li> ~ </li>
+						</ul>
+					<li><strong>ICE ICE BABY</strong></li>
+						<ul>
+							<li>div.warning p {color: red}</li>
+							<li>em {color: red}</li>
+							<li>#caution p {color: red}</li>
+							<li>div#warning p {color: red}</li>
+						</ul>
+					<li><strong>Pseudo Classes</strong></li>
+						<ul>
+							<li>visited</li>
+							<li>active</li>
+							<li>hover</li>
+							<li>first/last child</li>
+							<li>checked</li>
 
+						</ul>
+					
 
+				</ul>
+		</ul>
     </div>
 
     <!-- Linking the jQuery -->
