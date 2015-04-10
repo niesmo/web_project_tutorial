@@ -5,3 +5,8 @@
 .no-style{
     list-style-type:none;
 }
+
+.table-of-content li {
+  margin-top: 0;
+  margin-bottom: 0;
+}
