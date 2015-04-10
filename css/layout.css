@@ -57,3 +57,7 @@ header ul li a:hover{
     margin:0 auto;
     background-color:antiquewhite;
 }
+
+.content{
+    padding:0 20px 0;
+}
