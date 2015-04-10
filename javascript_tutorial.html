@@ -24,7 +24,6 @@
         </nav>
     </header>
     <div class="wrapper">
-        <h3>JavaScript Tutorial</h3>
         <h4>Basic Info</h4>
 <hr/>
     <ol>
@@ -376,26 +375,158 @@ You can place the < script > tag containing your JavaScript anywhere within you 
             <strong>Functions</strong>:
             <br/>
             <ul>
-                <li>for
-            <em>Syntax:</em>
-            <br/>
-            <pre>
- for (initialization; test condition; iteration statement){
-     Statement(s) to be executed if test condition is true
-}
-            </pre>
+                <li><strong>Defination:</strong> To define a function in JavaScript is by using the function keyword, followed by a unique function name, a list of parameters (that might be empty), and a statement block surrounded by curly braces.
                 </li>
-                <li>for..in Loop
-            <em>Syntax:</em>
-            <br/>
-            <pre>
- for (variablename in object){
-  statement or block to execute
-}
-            </pre>
+                <li><strong>Expression:</strong> 
+                    <br/>
+                    <ul>
+                        <li>
+                            Declear an ordinary function:
+                            <pre>
+        function foo (a, b) { … }
+        foo("hi", 3);
+                            </pre>
+                        </li>
+                        <li>
+                            Functions can be anonymous
+                            <pre>
+        function (a, b) { … }
+                            </pre>
+                        </li>
+                        <li>
+                            Functions can be assigned to variables
+                            <pre>
+        var foo = function (a, b) {…};
+	    foo("hi", 3);
+                          </pre>
+                        </li>
+                    </ul>
+                             
+                </li>
+                <li><strong>Use Function:</strong> 
+                    <br/>
+                    <ul>
+                        <li>
+                            Can be passed as arguments
+                            <pre>
+        function apply(x, a) { 
+          return x(a); //x is a function!
+        } 
+ 
+        function square(i) { 
+          return i * i; 
+        } 
+ 
+        apply(square, 5) //=>25 
+                            </pre>
+                        </li>
+                        <li>
+                            Can be returned as return values
+                            <pre>
+       function grantDegree(a) { 
+          var prefix = "Dr. "; 
+       function add() { 
+          return prefix + a; 
+        } 
+          return add; //returns a function!
+        }
+        var prof = grantDegree("Turing"); 
+        prof()  // prof is a function
+                            </pre>
+                        </li>
+                        <li>
+                            Closure: Can return an inner function
+                            <br/>
+                            (1):
+                            <pre>
+                             
+        function greaterThan (bound) { 
+          
+        function compare (value) { 
+            return value > bound; 
+          } 
+            return compare; //1-arg function
+        } 
+ 
+        var testPos = greaterThan(0); 
+        testPos(4) //=>true 
+        testPos(-3) //=>false
+                          </pre>
+                            <br/>
+                            (2):
+                          <pre>
+        sort([compareFunction])
+                              
+        function compareNumbers(a, b) {
+          return a – b;
+        }
+
+        function lenOrder (a, b) {
+          return a.length – b.length;
+        }
+                          </pre>
+                        </li>
+                        <li>
+                            Closure+Anonymity
+                            <pre>
+        function greaterThan (bound) { 
+          return function (value) { 
+            return value > bound; 
+          } 
+        }
+
+        var testPos = greaterThan(0); 
+        testPos(4) //=>true 
+        testPos(-3) //=>false 
+
+                          </pre>
+                        </li>
+                    </ul>
+                             
                 </li>
             </ul>
         </li>
+</ol>
+
+<h3>Objects</h3>
+<hr/>
+    <ol>
+        <li><strong>Objects:</strong>
+            <br/>
+        <ul>
+            <li><strong>Introduction:</strong>
+                
+                <br/>
+                JavaScript is an Object Oriented Programming (OOP) language. A programming language can be called object-oriented if it provides four basic capabilities to developers:
+                <ul>
+                    <li>
+                        <em>Encapsulation</em> : the capability to store related information, whether data or methods, together in an object
+                    </li>
+                    <li>
+                        <em>Aggregation</em> : the capability to store one object inside of another object
+                    </li>
+                    <li>
+                        <em>Inheritance</em> : the capability of a class to rely upon another class (or number of classes) for some of its properties and methods
+                    </li>
+                    <li>
+                        <em>Polymorphism</em> : the capability to write one function or method that works in a variety of different ways
+                    </li>
+                </ul>
+                </li>
+                <li><strong>Objects Properties:</strong>
+                
+                <br/>
+                Object properties can be any of the three primitive data types, or any of the abstract data types, such as another object. Object properties are usually variables that are used internally in the object's methods, but can also be globally visible variables that are used throughout the page
+                
+                    <br/>
+                    For example: objectName.objectProperty = propertyValue;
+                    
+                </li>
+            </ul>
+        </li>
+    </ol>
+            
+            
             
             
             
