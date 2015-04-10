@@ -92,80 +92,121 @@ Comments in HTML:
 < /html >
 					</code>
 				</pre>
-
+			<hr />
 			<li><strong>CSS</strong></li>
 				<ul>
-					<li><strong>Introduction</strong></li>
-					<li><strong>Style Tag</strong></li>
-					<li><strong>Link to CSS Sheet</strong></li>
-					<li><strong>Example</strong></li>
+					<li><strong>Introduction</strong> - CSS is a way that HTML can be styled by specifying different elements and setting certain attributes to those elements.</li>
+					<li><strong>Style Tag - The style tag is a way to declare CSS stylings in a HTML document either in-line or at the top of the page in the header section.</strong></li>
+					<li><strong>Link to CSS Sheet</strong> - The other place CSS stylings can be kept is in a separate CSS file that is linked to the main page like such:</li>
+				</ul>
 					<pre>
 						<code>
+< html >
+	< head >
+		< link type="text/css" rel="stylesheet" href="3901Style.css" media="scree"/ >
+	< /head >
+	< body >
+		< p > I want this styled a certain way < /p >
+	< /body >
+< /html >
+						</code>
+					</pre>
+				<ul>
+					<li><strong>How to style in a separate sheet</strong></li>
+				</ul>
+					<pre>
+						<code>
+All em elements wil be red with a gray background
+
 em {
 	color:red;
 	background: gray;
 }
 						</code>
 					</pre>
-					<li><strong>Box Model</strong></li>
+				<ul>
+					<li><strong>Box Model - Automatic box surrounding any html element that consists of padding, a border,and a margin.</strong></li>
 					<ul>
-						<li>Margin</li>
-						<li>Padding</li>
-						<li>Vertical Collapsing</li>
+						<li>Margin - Outside layer of space between elements</li>
+						<li>Padding - Inside layer of space between elements</li>
+						<li>Vertical Collapsing - Margins collapse to the size of the largest one.  If a paragraph elements had a bottom margin of 25px and another paragraph element had a top margin of 50px, they would collapse so that there is only 50px between the two paragraph elements.</li>
 					</ul>
-					<li><strong>Inheritance</strong></li>
-					<li><strong>Importance</strong></li>
+					<img src="img/box-model.gif" alt="box-model" style="margin:10px 200px"/>
+					<li><strong>Inheritance</strong> - some stylings are passed down from parent tag to child tag. (font weight, color, family etc.)</li>
+					<li><strong>Importance</strong> - some elements are selected by multiple tags when styling.  There is a ranking system to help determine which styling should apply.</li>
 						<ul>
-							<li>Location</li>
-							<li>Marked As Importance</li>
-							<li>Specificity</li>
-							<li>Declaration Order</li>
+							<li>Location - which file is the stying found in. (Author, user, browser)</li>
+							<li>Marked As Importance - is the styling marked as !Important</li>
+							<li>Specificity - how specific is the styling</li>
+							<li>Declaration Order - what order is the styling defined in</li>
 						</ul>
 					<li><strong>Source</strong></li>
 						<ul>
-							<li>Author</li>
-							<li>User</li>
-							<li>Browser</li>
+							<li>Author - linked stylings by author</li>
+							<li>User - user settings interpreted by the browser</li>
+							<li>Browser - general stylings for default when not specified</li>
 						</ul>
 					<li><strong>Priority Order</strong></li>
 						<ol>
-							<li>User Important</li>
+							<li>User Important - Most important!li>
 							<li>Author Important</li>
 							<li>Author (normal)</li>
 							<li>User (normal)</li>
-							<li>Browser (normal)</li>
+							<li>Browser (normal) - Least important!</li>
 						</ol>
-					<li><strong> Certain Elements: ID's</strong></li>
-					<li><strong>Block Elements</strong></li>
-					<li><strong>Special Tags</strong></li>
-					<li><strong>Selecting Ancestors/Siblings</strong></li>
+					<li><strong> Certain Elements: ID's</strong> A specific name can be chosen if an ID is used.  This name has to be specific to ONE specific element, meaning that it can't be used more than once.  Specified inline with the tag id="one"</li>
+					<li><strong>Block Elements</strong> - elements that have padding and margins around them that affect the layout of the document.</li>
+					<li><strong>Special Tags</strong> - specifically the span tag.  Used to style words within a paragraph that are not of a different element type.</li>
+					<li><strong>Selecting Ancestors/Siblings</strong> - elements can be chosen as ancestors or siblings</li>
 						<ul>
 							<li>Space between elements vs. comma</li>
-							<li> > </li>
-							<li> + </li>
-							<li> ~ </li>
+							<li> parent > child - select a child</li>
+							<li> element + first sibling</li>
+							<li> element ~ all siblings after</li>
 						</ul>
-					<li><strong>ICE ICE BABY</strong></li>
+					<li><strong>ICE ICE BABY - ICE order for specificity (Number of: ID's, Classes, Elements)</strong></li>
 						<ul>
-							<li>div.warning p {color: red}</li>
-							<li>em {color: red}</li>
-							<li>#caution p {color: red}</li>
-							<li>div#warning p {color: red}</li>
+							<li>div.warning p {color: red} Sp = (0, 1, 2)</li>
+							<li>em {color: red} Sp = (0, 0, 1)</li>
+							<li>#caution p {color: red} Sp = (1, 0, 1)</li>
+							<li>div#caution p {color: red} Sp = (1, 0, 2)</li>
+							<li>The most specific is the last one!! Highest number of ID's</li>
 						</ul>
-					<li><strong>Pseudo Classes</strong></li>
+					<li><strong>Pseudo Classes - Allows elements to be selected by attributes that are not elements</strong></li>
 						<ul>
-							<li>visited</li>
-							<li>active</li>
-							<li>hover</li>
-							<li>first/last child</li>
-							<li>checked</li>
+							<li>visited - :visited</li>
+							<li>active - :active</li>
+							<li>hover - :hover</li>
+							<li>first/last child - :first-child, :last-child</li>
+							<li>checked - :checked</li
+						</ul>
+						<pre>
+							<code>
+All :hover elements will be red
 
-						</ul>
-					
+< html >
+	< head >
+			< title >Using Pseudo-classes< /title >
+			< style >
+				:hover {
+							color:red;
+						}
+			< /style >
+	< /head >
+	< body >
+		...
+	< /body >	
+< /html >			
+							</code>
+						</pre>
 
 				</ul>
 		</ul>
     </div>
+
+						<div class="tiy">
+							<a href="http://jsfiddle.net">Try it</a>
+						</div>
 
     <!-- Linking the jQuery -->
     <script src="js/jquery/jquery.js"></script>
