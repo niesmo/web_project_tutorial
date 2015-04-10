@@ -171,13 +171,48 @@ puts my_num./(2.5) # my_num/2.5</code></pre>
 
             <hr/>
             <h3 id="conditionals">Conditionals</h3>
-            <p>BLAHHHHHHHHHHHHHHH</p>
-<pre><code>
-    1
-2
-3
-4
+            <p>Ruby's conditional statements are very similar to what you are likely already familiar with. The if, case, and while statements are similar to the ones you've seen before</p>
+<pre><code>if cond
+    x+= x+1
+else
+    x+=1
+end
+
+case score
+when score == 0
+    #action1
+when score > 3
+    #action2
+when score > 8
+    #action3
+else
+    #action4
+end
+
+while cond
+    puts("all about those elements")
+end
 </code></pre>
+
+            <p>There is also some more unique ways to use these statements in one line of code. As well as corresponding logical negatives for most of the examples. If statements have a corresonding unless statement, while have until. The else if key word is also changed to elsif in Ruby.</p>
+
+<pre><code>
+if cond
+    #actions
+elsif mx >9
+    #OtherActions
+ end   
+    
+func(x) if cond #func will only execute if cond is true
+doStuff(y) while cond #will continue to execute as long as cond is true
+
+
+func(bt) unless cond    #will execute unless cond is true
+func(ftr) until cond    #will execute untill cond is true
+</code></pre>
+    
+            <p>There is also two additional logical operators to what you've likely experienced. The === and <=> operators. The === will check equality without attempting to typecast a variable, the == will typecast. This means they can produce very different results. The <=>, also refered to as the spaceship operator returns -1, 0, or 1 depending on if the first arguement is smaller, equal to, or larger than the second</p>
+
 
             <hr />
             <h3 id="methods">Methods</h3>
