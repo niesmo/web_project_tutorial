@@ -24,7 +24,7 @@
         </nav>
     </header>
     <div class="wrapper">
-        <h4>Basic Info</h4>
+        <h2>Basic Info</h2>
 <hr/>
     <ol>
         <li>
@@ -274,7 +274,7 @@ You can place the < script > tag containing your JavaScript anywhere within you 
                     For Example:
                     <ul>
                         <li>
-                            ￼￼￼￼C = A + B will assigne value of A + B into C
+                            C = A + B will assigne value of A + B into C
                         </li>
                         <li>
                             C += A is equivalent to C = C + A
@@ -340,7 +340,7 @@ You can place the < script > tag containing your JavaScript anywhere within you 
             <em>Syntax:</em>
             <br/>
             <pre>
- ￼do{
+ do{
    Statement(s) to be executed;
 } while (expression);
             </pre>
@@ -383,20 +383,20 @@ You can place the < script > tag containing your JavaScript anywhere within you 
                         <li>
                             Declear an ordinary function:
                             <pre>
-        function foo (a, b) { … }
+        function foo (a, b) {...}
         foo("hi", 3);
                             </pre>
                         </li>
                         <li>
                             Functions can be anonymous
                             <pre>
-        function (a, b) { … }
+        function (a, b) {...}
                             </pre>
                         </li>
                         <li>
                             Functions can be assigned to variables
                             <pre>
-        var foo = function (a, b) {…};
+        var foo = function (a, b) {...};
 	    foo("hi", 3);
                           </pre>
                         </li>
@@ -445,7 +445,7 @@ You can place the < script > tag containing your JavaScript anywhere within you 
         function compare (value) { 
             return value > bound; 
           } 
-            return compare; //1-arg function
+            return compare; 
         } 
  
         var testPos = greaterThan(0); 
@@ -458,11 +458,11 @@ You can place the < script > tag containing your JavaScript anywhere within you 
         sort([compareFunction])
                               
         function compareNumbers(a, b) {
-          return a – b;
+          return a - b;
         }
 
         function lenOrder (a, b) {
-          return a.length – b.length;
+          return a.length - b.length;
         }
                           </pre>
                         </li>
@@ -488,7 +488,7 @@ You can place the < script > tag containing your JavaScript anywhere within you 
         </li>
 </ol>
 
-<h3>Objects</h3>
+<h2>Objects</h2>
 <hr/>
     <ol>
         <li><strong>Objects(Associative arrays):</strong>
@@ -532,7 +532,7 @@ You can place the < script > tag containing your JavaScript anywhere within you 
         var myCar = 
         {	make: "Acura",
             year: 1996,	
-            plate: "NKR462“
+            plate: "NKR462"
         };
                         
         myCar.make = "Ford"
@@ -657,8 +657,8 @@ All JavaScript objects inherit their properties and methods from their prototype
                                         
         	var i = n.indexOf(elt);
             while (i != -1) {
-                report(i);
-                i = n.indexOf(elt, i + 1);
+			report(i);
+			i = n.indexOf(elt, i + 1);
             }
 
                                     </pre>
@@ -668,7 +668,7 @@ All JavaScript objects inherit their properties and methods from their prototype
             Concatenate: concat
             Using indexOf and lastIndexOf
                                         
-            concat(a1, a2, …, aN)
+            concat(a1, a2, ..., aN)
 	        var d = n.concat(n);
                                     </pre>
                                 </li>
