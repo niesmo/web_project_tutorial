@@ -31,7 +31,7 @@
             <ul>
                 <li><a href="#intro">Introduction</a></li>
                 <li><a href="#irb">Ruby Interpreter (irb)</a></li>
-                <li><a href="callingfunc">Calling some functions (puts, +, *, ...)</a></li>
+                <li><a href="#callingfunc">Calling some functions (puts, +, *, ...)</a></li>
                 <li><a href="#returntypes">Return Types</a></li>
                 <li><a href="#functions">Functions</a></li>
                 <li><a href="#classes">Classes</a></li>
@@ -92,7 +92,7 @@ class dog #class name is dog
         puts("wooof")
     end
 end
-<hr/>
+
 frodo = Dog.new #creating a Dog object
 frodo.bark()
 </code></pre>
@@ -124,8 +124,8 @@ class Dog
 
     attr_accessor : age #accessor for creating get/set 
 end
-<hr/>
-    thorin = Dog.new(89, Grey, "Oaken'sheild")
+
+thorin = Dog.new(89, Grey, "Oaken'sheild")
 </code></pre>
 
             <p>
@@ -137,14 +137,27 @@ end
 
             <h3 id="modules">Modules</h3>
             <p>Modules are a way of grouping different things all together. You can group classes, methods, and constants. One of the biggest advanteges is that they prevent from name clashing. You can have a class with the same name in two different modules without any problems</p>
-            <pre><code>module Identifier
+
+<pre><code>module Identifier
     statement1
     statement2
     ..................
-end
-<<<<<<< HEAD
-            </code>
-        </pre>
+end</code></pre>
+            
+            <p>For example, you can have a module that is a wrapper for all your simple mathematic functions</p>
+
+<pre><code>module MyMathModule
+    PI = 3.1415
+    def MyMathModule.square a
+       a*a
+    end
+    def MyMathModule.pythag(a,b)
+        ((a*a)+(b*b))**0.5
+    end
+end</code></pre>
+            <div class="tiy">
+                <a href="http://repl.it/hzg/1">Try it</a>
+            </div>
             
             <hr/>
             <h3 id="iterators">Iterators</h3>
@@ -163,7 +176,6 @@ arr4 = arr3 + arr1
             </p>
 <pre><code>
     arr = [0,1,2,3,4,5]
-    <hr/>
     arr.first           #=> 0
     arr.last            #=> 9
     arr.take(4)         #=> [0,1,2,3]
@@ -183,51 +195,8 @@ arr4 = arr3 + arr1
 
             <hr/>
             <h3 id="builtIn">builtIn</h3>
-=======
-</code>
-</pre>
-            <p>For example, you can have a module that is a wrapper for all your simple mathematic functions</p>
-<pre><code>module MyMathModule
-    PI = 3.1415
-    def MyMathModule.square a
-       a*a
-    end
-    def MyMathModule.pythag(a,b)
-        ((a*a)+(b*b))**0.5
-    end
-end</code></pre>
-            <div class="tiy">
-                <a href="http://repl.it/hzg/1">Try it</a>
-            </div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-                <!-- Pre tag will take all spaces into account -->
-                <!--<pre>
-                        <code>
-        class ApplicationController < ActionController::Base
-            # Prevent CSRF attacks by raising an exception.
-            # For APIs, you may want to use :null_session instead.
-            protect_from_forgery with: :exception
-            def hello
-                render text: "hello, world!"
-            end
-        end
-                        </code>
-                    </pre>-->
-</div>
->>>>>>> 2af7d4982ce39808adebc96bbf44a529d57540cb
+        </div>
     </div>
     
 
