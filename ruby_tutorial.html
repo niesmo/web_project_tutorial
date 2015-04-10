@@ -33,9 +33,10 @@
                 <li><a href="#irb">Ruby Interpreter (irb)</a></li>
                 <li><a href="#variables">Variables</a></li>
                 <li><a href="#callingfunc">Calling some functions (puts, +, *, ...)</a></li>
+                <li><a href="#conditionals">Conditional Structure</a></li>
                 <li><a href="#methods">Methods</a></li>
                 <li><a href="#classes">Classes</a></li>
-                <li>
+                <!--<li>
                     <ul>
                         <li>initialize function & new function</li>
                         <li>Instance variables</li>
@@ -44,11 +45,11 @@
                         <li>Local Variables</li>
                         <li>Constants</li>
                     </ul>
-                </li>
+                </li>-->
                 <li><a href="#modules">Modules</a></li>
                 <li><a href="#iterators">Iterators</a></li>
-                <li><a href="arrays">Arrays</a></li>
-                <li><a href="hashes">Hashes</a></li>
+                <li><a href="#arrays">Arrays</a></li>
+                <li><a href="#hashes">Hashes</a></li>
             </ul>
 
             <h3 id="intro">Introduction</h3>
@@ -67,7 +68,66 @@
             <hr/>
 
             <h3 id="variables">Variables</h3>
-            <p></p>
+            <p>Variables are simply memory locations that hold data in our program. Variables in Ruby are similar to variables in other programming languages.</p>
+            <p>In this section, we are going to talk about Global variables and Constants. If you would like to know more about other kinds of variables, you could go and read the <a href="#classes">Classes</a> section of this tutorials.</p>
+            <br />
+            <h4>Global Variables</h4>
+            <p>Global variables are a kind of variables that you can access them from anywhere in your program. They must start with $. It is  best practice that your global variables are all in lowercase and separated with underscore if multiple words.</p>
+<pre><code>$total_function_call_count = 0
+
+def add a,b
+    $total_function_count+=1
+    a+b
+end
+
+def sub a,b
+    $total_function_count+=1
+    a-b
+end
+
+def mult a,b
+    $total_function_count+=1
+    a*b
+end
+
+def div a,b
+    $total_function_count+=1
+    a/b
+end
+
+add 1,2
+sub 2,1
+mult 8,9
+div 2,1
+
+puts "How many funciotn calls did we have ? #{$total_function_count}"
+</code></pre>
+            <div class="tiy">
+                <a target="_blank" href="http://repl.it/iEg">Try it</a>
+            </div>
+
+            <h4>Constants</h4>
+            <p>Constants are variables that are intended to stay the same all throughout the execution of a program. One great example for constant is the PI number. The number PI should NOT change under any circumstances.</p>
+            <p>Constant variables must begin with uppercase letters. It is best practice that the constant variable is in all uppercase. Re-assignign value to a constant will result in a warning (It still does the re-asignment however). It is worth noting that accessing a constant that has not been initialized yet will result in a runtime error. Another thing that is noticable is that you cannot assign a value to a constant variable from within a method. That is considered to be Dynamic Constant Assignment which will result in an error.</p>
+<pre><code>#constant variable
+PROGRAM_NAME = "Best Tutorials"
+
+def print_program_name
+    puts PROGRAM_NAME
+end
+
+#setting a constant in a variable => ERROR
+=begin
+def set_program_name name
+    PROGRAM_NAME = name
+end
+=end
+
+print_program_name #=> will execute fine
+</code></pre>
+            <div class="tiy">
+                <a target="_blank" href="http://repl.it/iEq">Try it</a>
+            </div>
 
             <hr />
 
@@ -108,6 +168,16 @@ puts my_num./(2.5) # my_num/2.5</code></pre>
             <div class="tiy">
                 <a target="_blank" href="http://repl.it/iCm">Try it</a>
             </div>
+
+            <hr/>
+            <h3 id="conditionals">Conditionals</h3>
+            <p>BLAHHHHHHHHHHHHHHH</p>
+<pre><code>
+    1
+2
+3
+4
+</code></pre>
 
             <hr />
             <h3 id="methods">Methods</h3>
@@ -279,8 +349,7 @@ arr4 = arr3 + arr1
             
             <p>Here are some useful methods when dealing with arrays. Assume that arr is in it's original condition for each method call.
             </p>
-<pre><code>
-    arr = [0,1,2,3,4,5]
+<pre><code>arr = [0,1,2,3,4,5]
     arr.first           #=> 0
     arr.last            #=> 9
     arr.take(4)         #=> [0,1,2,3]
@@ -296,8 +365,61 @@ arr4 = arr3 + arr1
 
             <hr/>
             <h3 id="hashes">Hashes</h3>
+            <p>A Hash is a collection of key-value pairs like this: "employee" => "salary". It is similar to an Array, except that indexing is done via arbitrary keys of any object type, not an integer index.</p>
+            <p>The order in which you traverse a hash by either key or value may seem arbitrary and will generally not be in the insertion order. If you attempt to access a hash with a key that does not exist, the method will return nil.</p>
 
+            <p>You can create hashes in many different ways. Two of the most commons ways are shown below</p>
 
+<pre><code>my_hash = Hash.new
+my_hash = Hash.new 0 #=>all the values are set to zero by default
+</code></pre>
+
+            <p>Or you could use the implicit form and define your hash</p>
+
+<pre><code>grades = { "Jane Doe" => 10, "Jim Doe" => 6 }</code></pre>
+
+            <p>In most cases, you are trying to create a structure that will be repeated. For example an array of hashes. each of these hashes are going to have the same form. Therefore, it is best practice to use a symbole instead of a literal as the key. A symbole is defined ONLY ONCE in the execution of your program. As a result, this will be taking significantly less amount of space on the disk, especially if your array grows and have a large amount of objects in it.</p>
+
+<pre><code>options = { :font_size => 10, :font_family => "Arial" }</code></pre>
+            <p>But since this form was really common to use, Ruby has a syntactic sugar for it. This is very similar to the way that you define objects in JavaScripts.</p>
+<pre><code>options = { font_size: 10, font_family: "Arial" }</code></pre>
+
+            <p>Hashes are commonly used for defining objects. They are passed into the method as an argument, and if they are the last argument passed to the method, no braces are needed</p>
+
+<pre><code>Person.create(name: "John Doe", age: 27)
+def self.create(params)
+  @name = params[:name]
+  @age  = params[:age]
+end
+</code></pre>
+
+<pre><code>my_hash = {}
+
+my_hash['Nima'] = {f_name: "Nima", l_name: "Esmaili Mokaram", phone: "123-456-7890"}
+my_hash['Max'] = {f_name: "Max", l_name: "Maguire", phone: "987-654-3210"}
+
+puts my_hash
+puts my_hash.keys
+puts my_hash.values
+
+#creating the default values
+h = Hash.new { |hash, key| hash[key] = "Go Fish: #{key}" }
+
+puts h['c']
+h['c'] = "Temp"
+puts h['c']
+puts h['Nima']
+
+#creating a BAD default value
+h = Hash.new ("Default")
+h[1].upcase!  #changing the default value! BECAREFUL
+h[2]
+</code></pre>
+
+            <div class="tiy">
+                <a target="_blank" href="http://repl.it/iFV/1">Try it</a>
+            </div>
+            
         </div>
     </div>
     
