@@ -69,3 +69,19 @@ header ul li a:hover{
 .heading{
     padding-top:20px;
 }
+
+
+
+div.tiy{
+    text-align: right;
+    height: 50px;
+}
+
+div.tiy > a{
+    background-color: rgb(51, 118, 153);
+    padding: 10px;
+    font-size: 20px;
+    font-family: arial;
+    text-decoration: none;
+    color: white;
+}
