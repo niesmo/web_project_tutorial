@@ -25,6 +25,383 @@
     </header>
     <div class="wrapper">
         <h3>JavaScript Tutorial</h3>
+        <h4>Basic Info</h4>
+<hr/>
+    <ol>
+        <li>
+            <strong>Defination</strong>: Javascript is a scripting language produced by Netscape for use within HTML Web pages.
+        </li>
+        <br/>
+        <li><strong>What is JavaScript?</strong> 
+            <br/>
+            <br/>
+            <ul>
+                <li>
+                    JavaScript is a lightweight, interpreted programming language
+                </li>
+                <li>
+                    Designed for creating network-centric applications
+                </li>
+                <li>
+                    Complementary to and integrated with Java
+                </li>
+                <li>
+                   Complementary to and integrated with HTML
+                </li>
+                <li>
+                    Open and cross-platform
+                </li>
+            </ul>
+        </li>
+        <br/>
+        <li>
+            <strong>JavaScript Syntax</strong>: 
+            <br/>
+            A JavaScript consists of JavaScript statements that are placed within the < script >... </ script > HTML tags in a web page.
+            <br/>
+You can place the < script > tag containing your JavaScript anywhere within you web page but it is preferred way to keep it within the < head > tags.
+            <br/>
+            <br/>
+           <ul>
+               <li>
+                   <strong>Whitespace and Line Breaks:</strong>
+                   <br/>
+                   JavaScript ignores spaces, tabs, and newlines that appear in JavaScript programs.
+               </li>
+               <li>
+                   <strong>Semicolons are Optional:</strong>
+                   <br/>
+                   JavaScript allows you to omit this semicolon if your statements are each placed on a separate line.
+               </li>
+               <li>
+                   <strong>Case Sensitivity:</strong>
+                   <br/>
+                   language keywords, variables, function names, and any other identifiers must always be typed with a consistent capitalization of letters.
+               </li>
+               <li>
+                   <strong>Comments in JavaScript:</strong>
+                   <br/>
+                   <ul>
+                       <li>
+                           Any text between a // and the end of a line is treated as a comment and is ignored by JavaScript.
+                       </li>
+                       <li>
+                           Any text between the characters /* and */ is treated as a comment. This may span multiple lines.
+                       </li>
+                       <li>
+                           JavaScript also recognizes the HTML comment opening sequence < !--. JavaScript treats this as a single-line comment, just as it does the // comment. The HTML comment closing sequence --> is not recognized by JavaScript so it should be written as //-->.
+                       </li>
+                       
+                   </ul>
+                </li>
+            </ul>
+        </li>
+        <br/>
+        <li>
+            <strong>Data Type:</strong>
+            <br/>
+            <ul>
+               
+                <li> Primitive type:
+                    <ul>
+                <li>
+                    boolean
+                </li>
+                <li>
+                    number
+                </li>
+                <li>
+                    string
+                </li>
+                <li>
+                    null 
+                </li>
+                <li>
+                    undefined
+                </li>
+            </ul>
+                </li>
+            </ul>
+            <ul>
+               
+                <li> Reference type:
+                    <ul>
+                <li>
+                    arrays
+                </li>
+                <li>
+                    objects
+                </li>
+                <li>
+                    functions
+                </li>
+                
+            </ul>
+                </li>
+            </ul>
+            
+        </li>
+        <br/>
+        <li>
+            <strong>Variables:</strong>
+            <ul>
+                
+                <li><strong>Variable Expressions:</strong>
+                    Variables are declared with the var keyword, for example:
+                    var name;
+                    var money;
+                </li>
+                <li><strong>Variable Scope:</strong>
+                    The scope of a variable is the region of your program in which it is defined. JavaScript variable will have only two scopes:
+                    <ul>
+                        <li>
+                            <strong>Global variables:</strong>
+                            <br/>
+                            A global variable has global scope which means it is defined everywhere in your JavaScript code.
+                        </li>
+                        <li>
+                            <strong>Local variables:</strong>
+                            <br/>
+                            A local variable will be visible only within a function where it is defined. Function parameters are always local to that function.
+                        </li>
+                    </ul>
+                   
+                </li>
+                
+                <li><strong>Variable Names:</strong>
+                    The scope of a variable is the region of your program in which it is defined. JavaScript variable will have only two scopes:
+                    <ul>
+                        <li>
+                            You should not use any of the JavaScript reserved keyword as variable name
+                        </li>
+                        <li>
+                            JavaScript variable names should not start with a numeral (0-9). They must begin with a letter or the underscore character. For example, 123test is an invalid variable name but _123test is a valid one.
+                        </li>
+                    </ul>
+                   
+                </li>
+            </ul>
+        </li>
+            
+        <li>
+            <strong>Operators:</strong>
+            <ul>
+                <li>
+                    
+                    <em>The Arithmatic Operators:</em>
+                    
+                    <br/>                    
+                   Assume variable A holds 10 and variable B holds 20 then:
+                    
+                    <ul>
+                        <li>
+                            A + B will give 30
+                        </li>
+                        <li>
+                            A - B will give -10
+                        </li>
+                        <li>
+                            A * B will give 200
+                        </li>
+                        <li>
+                            B / A will give 0.5
+                        </li>
+                        <li>
+                            B % A will give 0
+                        </li>
+                        <li>
+                            A++ will give 11
+                        </li>
+                        <li>
+                            A-- will give 9
+                        </li>
+                    </ul>
+                </li>
+               <br/>
+               <br/>
+                <li>
+                    
+                    <em>The Comparison Operators:</em>
+                   <br/>
+                    Assume variable A holds 10 and variable B holds 20 then:
+                    <ul>
+                        <li>
+                            (A == B) is not true
+                        </li>
+                        <li>
+                            (A != B) is true
+                        </li>
+                        <li>
+                            (A > B) is not ture
+                        </li>
+                        <li>
+                            (A < B) is ture
+                        </li>
+                        <li>
+                            (A >= B) is not ture
+                        </li>
+                        <li>
+                            (A <= B) is ture
+                        </li>
+                        
+                    </ul>
+                </li>
+               <br/>
+               <br/>
+                <li>
+                    
+                    <em>The Logical Operators:</em>
+                    <br/>
+                    Assume variable A holds 10 and variable B holds 20 then:
+                    <ul>
+                        <li>
+                            (A && B) is true
+                        </li>
+                        <li>
+                            (A || B) is true
+                        </li>
+                        <li>
+                            !(A && B) is false
+                        </li>
+                        
+                        
+                    </ul>
+                </li>
+               <br/>
+               <br/>
+                <li>
+                    <em>The Assignment Operators:</em>
+                    <br/>    
+                    For Example:
+                    <ul>
+                        <li>
+                            ￼￼￼￼C = A + B will assigne value of A + B into C
+                        </li>
+                        <li>
+                            C += A is equivalent to C = C + A
+                        </li>
+                        <li>
+                            C -= A is equivalent to C = C - A
+                        </li>
+                        <li>
+                            C *= A is equivalent to C = C * A
+                        </li>
+                        
+                        
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <strong>If...else Statement</strong>:<br/> The if statement is the fundamental control statement that allows JavaScript to make decisions and execute statements conditionally.
+            <br/>
+            <em>Syntax:</em>
+            <br/>
+            <pre>
+ if (expression){
+   Statement(s) to be executed if expression is true
+}else {
+   Statement(s) to be executed if expression is false
+}
+            </pre>
+        </li>
+        <li>
+            <strong>Switch Statement</strong>:<br/> The basic syntax of the switch statement is to give an expression to evaluate and several different statements to execute based on the value of the expression. The interpreter checks each case against the value of the expression until a match is found. If nothing matches, a default condition will be used
+            <br/>
+            <em>Syntax:</em>
+            <br/>
+            <pre>
+ switch (expression)
+{
+  case condition 1: statement(s)
+                    break;
+  case condition 2: statement(s)
+                    break;
+   ...
+  case condition n: statement(s)
+                    break;
+  default: statement(s)
+}
+            </pre>
+        </li>    
+        <li>
+            <strong>While Loop</strong>:
+            <br/>
+            <ul>
+                <li>While
+            <em>Syntax:</em>
+            <br/>
+            <pre>
+ while (expression){
+   Statement(s) to be executed if expression is true
+}
+            </pre>
+                </li>
+                <li>Do...While
+            <em>Syntax:</em>
+            <br/>
+            <pre>
+ ￼do{
+   Statement(s) to be executed;
+} while (expression);
+            </pre>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <strong>For Loop</strong>:
+            <br/>
+            <ul>
+                <li>for
+            <em>Syntax:</em>
+            <br/>
+            <pre>
+ for (initialization; test condition; iteration statement){
+     Statement(s) to be executed if test condition is true
+}
+            </pre>
+                </li>
+                <li>for..in Loop
+            <em>Syntax:</em>
+            <br/>
+            <pre>
+ for (variablename in object){
+  statement or block to execute
+}
+            </pre>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <strong>Functions</strong>:
+            <br/>
+            <ul>
+                <li>for
+            <em>Syntax:</em>
+            <br/>
+            <pre>
+ for (initialization; test condition; iteration statement){
+     Statement(s) to be executed if test condition is true
+}
+            </pre>
+                </li>
+                <li>for..in Loop
+            <em>Syntax:</em>
+            <br/>
+            <pre>
+ for (variablename in object){
+  statement or block to execute
+}
+            </pre>
+                </li>
+            </ul>
+        </li>
+            
+            
+            
+            
+            
+
 
         <!-- The rest of the tutorial goes here -->
 
