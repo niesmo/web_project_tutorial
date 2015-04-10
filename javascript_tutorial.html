@@ -24,8 +24,7 @@
         </nav>
     </header>
     <div class="wrapper">
-        <h3>JavaScript Tutorial</h3>
-        <h4>Basic Info</h4>
+        <h2>Basic Info</h2>
 <hr/>
     <ol>
         <li>
@@ -275,7 +274,7 @@ You can place the < script > tag containing your JavaScript anywhere within you 
                     For Example:
                     <ul>
                         <li>
-                            ￼￼￼￼C = A + B will assigne value of A + B into C
+                            C = A + B will assigne value of A + B into C
                         </li>
                         <li>
                             C += A is equivalent to C = C + A
@@ -341,7 +340,7 @@ You can place the < script > tag containing your JavaScript anywhere within you 
             <em>Syntax:</em>
             <br/>
             <pre>
- ￼do{
+ do{
    Statement(s) to be executed;
 } while (expression);
             </pre>
@@ -376,26 +375,349 @@ You can place the < script > tag containing your JavaScript anywhere within you 
             <strong>Functions</strong>:
             <br/>
             <ul>
-                <li>for
-            <em>Syntax:</em>
-            <br/>
-            <pre>
- for (initialization; test condition; iteration statement){
-     Statement(s) to be executed if test condition is true
-}
-            </pre>
+                <li><strong>Defination:</strong> To define a function in JavaScript is by using the function keyword, followed by a unique function name, a list of parameters (that might be empty), and a statement block surrounded by curly braces.
                 </li>
-                <li>for..in Loop
-            <em>Syntax:</em>
-            <br/>
-            <pre>
- for (variablename in object){
-  statement or block to execute
-}
-            </pre>
+                <li><strong>Expression:</strong> 
+                    <br/>
+                    <ul>
+                        <li>
+                            Declear an ordinary function:
+                            <pre>
+        function foo (a, b) {...}
+        foo("hi", 3);
+                            </pre>
+                        </li>
+                        <li>
+                            Functions can be anonymous
+                            <pre>
+        function (a, b) {...}
+                            </pre>
+                        </li>
+                        <li>
+                            Functions can be assigned to variables
+                            <pre>
+        var foo = function (a, b) {...};
+	    foo("hi", 3);
+                          </pre>
+                        </li>
+                    </ul>
+                             
+                </li>
+                <li><strong>Use Function:</strong> 
+                    <br/>
+                    <ul>
+                        <li>
+                            Can be passed as arguments
+                            <pre>
+        function apply(x, a) { 
+          return x(a); //x is a function!
+        } 
+ 
+        function square(i) { 
+          return i * i; 
+        } 
+ 
+        apply(square, 5) //=>25 
+                            </pre>
+                        </li>
+                        <li>
+                            Can be returned as return values
+                            <pre>
+       function grantDegree(a) { 
+          var prefix = "Dr. "; 
+       function add() { 
+          return prefix + a; 
+        } 
+          return add; //returns a function!
+        }
+        var prof = grantDegree("Turing"); 
+        prof()  // prof is a function
+                            </pre>
+                        </li>
+                        <li>
+                            Closure: Can return an inner function
+                            <br/>
+                            (1):
+                            <pre>
+                             
+        function greaterThan (bound) { 
+          
+        function compare (value) { 
+            return value > bound; 
+          } 
+            return compare; 
+        } 
+ 
+        var testPos = greaterThan(0); 
+        testPos(4) //=>true 
+        testPos(-3) //=>false
+                          </pre>
+                            <br/>
+                            (2):
+                          <pre>
+        sort([compareFunction])
+                              
+        function compareNumbers(a, b) {
+          return a - b;
+        }
+
+        function lenOrder (a, b) {
+          return a.length - b.length;
+        }
+                          </pre>
+                        </li>
+                        <li>
+                            Closure+Anonymity
+                            <pre>
+        function greaterThan (bound) { 
+          return function (value) { 
+            return value > bound; 
+          } 
+        }
+
+        var testPos = greaterThan(0); 
+        testPos(4) //=>true 
+        testPos(-3) //=>false 
+
+                          </pre>
+                        </li>
+                    </ul>
+                             
                 </li>
             </ul>
         </li>
+</ol>
+
+<h2>Objects</h2>
+<hr/>
+    <ol>
+        <li><strong>Objects(Associative arrays):</strong>
+            <br/>
+        <ul>
+            <li><strong>Introduction:</strong>
+                
+                <br/>
+                JavaScript is an Object Oriented Programming (OOP) language. A programming language can be called object-oriented if it provides four basic capabilities to developers:
+                <ul>
+                    <li>
+                        <em>Encapsulation</em> : the capability to store related information, whether data or methods, together in an object
+                    </li>
+                    <li>
+                        <em>Aggregation</em> : the capability to store one object inside of another object
+                    </li>
+                    <li>
+                        <em>Inheritance</em> : the capability of a class to rely upon another class (or number of classes) for some of its properties and methods
+                    </li>
+                    <li>
+                        <em>Polymorphism</em> : the capability to write one function or method that works in a variety of different ways
+                    </li>
+                </ul>
+                </li>
+            <br/>
+                <li><strong>Objects Properties:</strong>
+                
+                <br/>
+                    
+                Object properties can be any of the three primitive data types, or any of the abstract data types, such as another object. Object properties are usually variables that are used internally in the object's methods, but can also be globally visible variables that are used throughout the page
+                
+                    <br/>
+                    For example: objectName.objectProperty = propertyValue;
+                    
+                </li>
+            <br/>
+                <li><strong>Objects Expression:</strong>
+                
+                <br/>
+                    <pre>
+        var myCar = 
+        {	make: "Acura",
+            year: 1996,	
+            plate: "NKR462"
+        };
+                        
+        myCar.make = "Ford"
+        myCar["year"] = 2006;
+
+        var str = "ate";
+        myCar["pl"+str] = "NKR463";
+                    </pre>
+                    
+                </li>
+            <br/>
+                <li><strong>Objects Methods(Verbs):</strong>
+                
+                <br/>
+                    Methods are actions that can be performed on objects and Methods are stored in properties as function definitions
+                    <br/>
+                    <br/>
+                    <em>You create an object method with the following syntax:</em> methodName : function() { code lines }
+                    <br/>
+                    <em>You access an object method with the following syntax::</em> objectName.methodName()
+                    
+                </li>
+                <br/>
+                <li><strong>Objects Properties(Nouns):</strong>
+                Properties are the values associated with a JavaScript object and A JavaScript object is a collection of unordered properties
+                <br/>
+                    
+                    
+                </li>
+                <br/>
+                <li>
+                    <strong>Method = property whose value is a function</strong>
+                </li>
+                <br/>
+                <li>
+                    <strong>Prototype:</strong>
+                    <ul>
+                        <li>Description:
+                            <br/>
+                        Every JavaScript object has a prototype. The prototype is also an object.
+
+All JavaScript objects inherit their properties and methods from their prototype.
+                        </li>
+                        <li>Characters:
+                            <br/>
+                            <ul>
+                                <li>
+                                    All JavaScript objects inherit the properties and methods from their prototype
+                                </li>
+                                <li>
+                                    Objects created using an object literal, or with new Object(), inherit from a prototype called Object.prototype.
+                                </li>
+                                <li>
+                                    Objects created with new Date() inherit the Date.prototype.
+                                </li>
+                                <li>
+                                    The Object.prototype is on the top of the prototype chain.
+                                </li>
+                                <li>
+                                    All JavaScript objects (Date, Array, RegExp, Function, ....) inherit from the Object.prototype.
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            Example(add prototype):
+                            <pre>
+            function Dog(n, a) { 
+            this.name = n; 
+            this.age = a; 
+        } 
+   
+        var Marmaduke = { 
+            bark: function (sound) { 
+              return this.name + "says" + sound; 
+            } 
+        } 
+ 
+        Dog.prototype = Marmaduke;
+                            </pre>
+                            
+                        </li>
+                        
+                        
+                    </ul>
+                    
+                </li>
+                
+            </ul>
+            
+        </li>
+        <li>
+            <strong>Arrays:</strong>
+            <ul>
+                <li>
+                    <strong>What is Array?</strong>
+                    <br/>
+                    An array is a special variable, which can hold more than one value at a time
+                </li>
+                <li>
+                    <strong>Creating an Array</strong>
+                    <br/>
+                    var array-name = [item1, item2, ...];      
+                </li>
+                <li>
+                    <strong>Access the Elements of an Array</strong>
+                    <br/>
+                    var name = cars[0];
+                    car[0]="Ope1";
+                </li>
+                <li>
+                    <strong>Methods</strong>
+                    <ul>
+                        <li>
+                            Accessors: Don't change the array
+                            <ol>
+                                <li>
+                                    <pre>
+            Searching:
+            Using indexOf and lastIndexOf
+                                        
+            indexOf(element[, startIndex])
+                                        
+        	var i = n.indexOf(elt);
+            while (i != -1) {
+			report(i);
+			i = n.indexOf(elt, i + 1);
+            }
+
+                                    </pre>
+                                </li>
+                                <li>
+                                    <pre>
+            Concatenate: concat
+            Using indexOf and lastIndexOf
+                                        
+            concat(a1, a2, ..., aN)
+	        var d = n.concat(n);
+                                    </pre>
+                                </li>
+                                <li>
+                                    <pre>
+            Extract a sub-section: slice
+	        slice(startIndex, endIndex)
+	        k = n.slice(1,3) //k is n[1], n[2]
+
+                                    </pre>
+                                </li>
+                                <li>
+                                    <pre>
+            Combine into string: join
+	        join(separator)
+	        s = n.join(" "); //default is ","
+                                    </pre>
+                                </li>
+                                
+                            </ol>
+                                    
+                        </li>
+                        <li>
+                            Mutators: change the array
+                            <pre>
+  1.        Add/remove to/from end: push/pop
+            var n = [10, 20];
+            newLength = n.push(30,40); //=>4
+            lastValue = n.pop(); //=>40
+
+  2.        Add/remove from beginning: unshift/shift
+            var n = [10, 20];
+            newLength = n.unshift(30,40); //=>4
+            firstValue = n.shift(); //=>30
+
+                            </pre>
+                            
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        
+        
+    </ol>
+            
+            
+            
+            
             
             
             
